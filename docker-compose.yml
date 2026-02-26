@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  bookshelf:
+    build: .
+    container_name: family-bookshelf
+    restart: unless-stopped
+    ports:
+      - "3000:3000"          # Change left port to host port if needed
+    volumes:
+      - bookshelf-data:/data  # Persistent SQLite database
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DB_PATH=/data/bookshelf.db
+
+volumes:
+  bookshelf-data:
