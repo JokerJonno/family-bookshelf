@@ -251,14 +251,15 @@ app.get('/api/export/csv', (req, res) => {
   res.send(csv);
 });
 
-// ── Fallback ──
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'public', 'index.html'));
-});
 
 // ── Boot ──
 db.init().then(async () => {
   await loadPlugins(app, db, helpers);
+
+  // ── Fallback — must be after plugins to avoid catching plugin static routes ──
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', 'public', 'index.html'));
+  });
   app.listen(PORT, '0.0.0.0', () => {
     console.log(`📚 Family Bookshelf running on http://0.0.0.0:${PORT}`);
     console.log(`📦 Plugins: ${getLoadedPlugins().map(p=>p.name).join(', ') || 'none'}`);
