@@ -9,6 +9,7 @@ RUN npm install --production
 # Copy source files
 COPY backend/ ./
 COPY frontend/ ./frontend/
+COPY plugins/ ./plugins/
 
 # Persistent data directory
 RUN mkdir -p /data
