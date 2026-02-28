@@ -1,0 +1,14 @@
+{
+  "id": "spice-o-meter",
+  "name": "Spice-o-Meter",
+  "version": "1.0.0",
+  "description": "Rate books by heat level (1-5 chillies) independently of the star rating. Perfect for dark romance readers who want to know how spicy a book is before diving in.",
+  "author": "JokerJonno",
+  "icon": "🌶️",
+  "hooks": {
+    "bookCard": true,
+    "bookDetail": true,
+    "navTab": false,
+    "stats": true
+  }
+}

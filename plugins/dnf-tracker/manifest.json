@@ -1,0 +1,18 @@
+{
+  "id": "dnf-tracker",
+  "name": "DNF Tracker",
+  "version": "1.0.0",
+  "description": "Track books you Did Not Finish, with a reason why. Helps the family avoid books that weren't worth completing and understand why someone put a book down.",
+  "author": "JokerJonno",
+  "icon": "🚫",
+  "hooks": {
+    "bookCard": true,
+    "bookDetail": true,
+    "navTab": true,
+    "stats": false
+  },
+  "navTab": {
+    "label": "DNF List",
+    "icon": "🚫"
+  }
+}
