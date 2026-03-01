@@ -74,7 +74,7 @@ apt update && apt install -y docker-ce docker-ce-cli containerd.io docker-buildx
 ### Deploy
 
 ```bash
-git clone https://github.com/JokerJonno/family-bookshelf.git
+git clone https://github.com/ArchiveHunter/family-bookshelf.git
 cd family-bookshelf
 docker compose up -d --build
 ```
@@ -99,7 +99,7 @@ Data is safe in the Docker volume. New database columns are added automatically 
 
 ```bash
 # Install a plugin
-git clone https://github.com/JokerJonno/bookshelf-plugin-NAME plugins/NAME
+git clone https://github.com/ArchiveHunter/bookshelf-plugin-NAME plugins/NAME
 
 # Rebuild
 docker compose down && docker compose up -d --build
@@ -113,7 +113,7 @@ See the Settings → Active Plugins section in the app for the full install comm
 
 ```bash
 apt update && apt install -y nodejs npm
-git clone https://github.com/JokerJonno/family-bookshelf.git /opt/family-bookshelf
+git clone https://github.com/ArchiveHunter/family-bookshelf.git /opt/family-bookshelf
 cd /opt/family-bookshelf/backend
 npm install --production
 npm install -g pm2
